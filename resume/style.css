@@ -1,3 +1,10 @@
+body {
+  /* border: 1px solid black; */
+  padding-left: 50px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+}
 table,
 td,
 th {
@@ -13,12 +20,42 @@ th {
   padding-top: 10px;
 }
 .heading h3 {
-  padding-top: 10px;
-  padding-left: 50px;
+  margin-top: -10px;
+  /* padding-left: 50px; */
 }
 .heading h1 {
-  text-align: center;
+  /* text-align: center; */
+  padding-top: 30px;
+  font-size: 50px;
+  word-spacing: 3px;
+  letter-spacing: 3px;
 }
 .heading p {
   text-align: justify;
+  width: 800px;
+  padding: 5px;
+  /* word-spacing: 1px; */
+  letter-spacing: 1.2px;
+  /* border: 1px solid black; */
+  line-height: 1.4;
+  font-weight: 400;
+}
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.skills li {
+  line-height: 0.5;
+  font-weight: 400;
+}
+.experience span {
+  font-size: 17px;
+}
+.experience li {
+  line-height: 1.5;
+  font-weight: 400;
 }
