@@ -5,6 +5,12 @@ body {
   font-family: "Montserrat", sans-serif;
   color: #222;
 }
+.pageLayout {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  gap: 20px;
+}
 table,
 td,
 th {
@@ -51,25 +57,27 @@ h3 {
   text-transform: uppercase;
 }
 
-.skills li {
+#skills li {
   line-height: 1.7;
   font-weight: 400;
 }
-.experience ul span {
-  font-size: 17px;
-}
-.experience li {
-  line-height: 1.7;
-  font-weight: 400;
-}
-.skills {
+
+#skills {
   /* border: 1px solid black; */
   max-width: 1200px;
 }
 
-.experience {
+#experience {
   max-width: 1365px;
 }
+#experience ul span {
+  font-size: 17px;
+}
+#experience li {
+  line-height: 1.7;
+  font-weight: 400;
+}
+
 .exp_company {
   display: flex;
   flex-direction: column;
@@ -85,11 +93,6 @@ span {
   flex-direction: column;
   justify-content: space-between;
 }
-.contact {
+#contact {
   max-width: 1100px;
-}
-#pageLayout {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
