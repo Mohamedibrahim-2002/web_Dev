@@ -1,0 +1,13 @@
+@import "tailwindcss";
+body {
+  /* background: #ccc;  */
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+td,
+tr,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
