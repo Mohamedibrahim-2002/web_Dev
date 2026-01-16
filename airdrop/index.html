@@ -7,17 +7,21 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <main>
-      <button type="submit" id="airdropBtn" class="border rounded-sm p-3">
+  <body class="h-14 bg-linear-to-r from-cyan-500 to-blue-500">
+    <main class="bg-amber-50 rounded-sm">
+      <button
+        type="submit"
+        id="airdropBtn"
+        class="border rounded-sm p-3 hover:bg-gray-400 hover:text-amber-50"
+      >
         Get airdropped 💸👈</button
       ><br />
-      <div class="container bg-center">
-        <form method="post" class="hidden">
+      <div class="container bg-center bg-gray-200">
+        <form method="post" class="hidden p-10 -mt-6">
           <a
             href="https://x.com/CryptoKaviYT/status/2011706960920674568?s=20"
             target="_blank"
-            class="border rounded-sm p-3"
+            class="border rounded-sm p-3 mb-3 hover:bg-amber-50"
             >Like & Retweet</a
           ><br />
           <input type="checkbox" class="my-5" required /> I have Liked &
@@ -42,13 +46,13 @@
             type="submit"
             value="Submit"
             placeholder="Submit"
-            class="border rounded-sm px-3"
+            class="border rounded-sm px-3 hover:bg-amber-50"
             id="finalBtn"
           />
         </form>
       </div>
-      <div class="successMsg hidden">
-        <span
+      <div class="successMsg hidden bg-gray-200 -mt-6 p-5 hover:bg-amber-50">
+        <span class=""
           >Successfully submitted! To verify, you must follow us & drop a
           comment on the post.</span
         >
