@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="border w-3xl h-96">
+      <form
+        action=""
+        method="post"
+        class="flex flex-col items-center-safe justify-center h-100"
+      >
+        <label for="txtbox" class="p-2">Enter your words :</label>
+        <input
+          type="text"
+          class="border w-[250px] mb-10 rounded-lg"
+          name="txtbox"
+          id="txtbox"
+          required
+        />
+        <input
+          type="submit"
+          value="check"
+          class="border w-[200px] hover:bg-gray-300 rounded-lg"
+          id="btn"
+        />
+      </form>
+    </div>
+
+    <script>
+      var myWord = "hello";
+      console.log(myWord.length);
+
+      var txt = document.getElementById("txtbox");
+      //   console.log(txt);
+
+      var btn = document.getElementById("btn");
+      //   console.log(btn);
+
+      btn.addEventListener("click", (event) => {
+        // console.log(txt.value.length);
+
+        if (txt.value.length < 5) {
+          event.preventDefault();
+          alert("enter 5+ characters");
+        }
+      });
+    </script>
+  </body>
+</html>
