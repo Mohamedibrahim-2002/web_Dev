@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +6,7 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
+  <body class="flex justify-center items-center">
     <div class="border w-3xl h-96">
       <form
         action=""
@@ -16,15 +16,16 @@
         <label for="txtbox" class="p-2">Enter your words :</label>
         <input
           type="text"
-          class="border w-[250px] mb-10 rounded-lg"
+          class="border w-[250px] mb-1 rounded-lg"
           name="txtbox"
           id="txtbox"
           required
         />
+        <span class="text-red-600 p-3 mb-5 hidden">Enter 5+ characters</span>
         <input
           type="submit"
           value="check"
-          class="border w-[200px] hover:bg-gray-300 rounded-lg"
+          class="border w-[200px] hover:bg-gray-300 rounded-lg mt-6"
           id="btn"
         />
       </form>
@@ -38,6 +39,10 @@
       //   console.log(txt);
 
       var btn = document.getElementById("btn");
+
+      var spantxt = document.querySelector("span");
+      console.log(spantxt);
+
       //   console.log(btn);
 
       btn.addEventListener("click", (event) => {
@@ -45,7 +50,7 @@
 
         if (txt.value.length < 5) {
           event.preventDefault();
-          alert("enter 5+ characters");
+          spantxt.classList.remove("hidden");
         }
       });
     </script>
