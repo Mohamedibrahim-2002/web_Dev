@@ -6,3 +6,7 @@ var btn = document.getElementById("btn");
 var form = document.querySelector("form");
 
 console.log(userName, email, btn, form);
+
+btn.addEventListener("click", (events) => {
+  events.preventDefault();
+});
