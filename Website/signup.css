@@ -85,7 +85,7 @@ form { display: grid; gap: 1.15rem; }
 fieldset { animation: fade-up .55s .56s both; }
 
 label, legend { font-size: .88rem; font-weight: 700; }
-input[type="text"], input[type="email"], input[type="number"] {
+input[type="text"], input[type="email"], input[type="number"], input[type="password"] {
   width: 100%;
   padding: .82rem .95rem;
   color: var(--ink);
@@ -149,3 +149,30 @@ button:focus-visible { outline: 3px solid #b9b6ff; outline-offset: 2px; }
   font-weight: 700;
 }
 button:disabled { cursor: wait; opacity: .8; transform: none; }
+
+.account-link { margin: 1.2rem 0 0; color: var(--muted); text-align: center; font-size: .82rem; }
+.account-link a { color: var(--primary-dark); font-weight: 800; text-decoration: none; }
+.account-link a:hover { text-decoration: underline; }
+
+
+.password-checklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .35rem .75rem;
+  margin: .15rem 0 0;
+  padding: 0;
+  color: var(--muted);
+  list-style: none;
+  font-size: .75rem;
+}
+.password-checklist li { transition: color .2s, transform .2s; }
+.password-checklist li::before {
+  content: "○";
+  display: inline-block;
+  width: 1.15rem;
+  color: #9aa3b5;
+  font-weight: 800;
+}
+.password-checklist li.met { color: #168a68; transform: translateX(2px); }
+.password-checklist li.met::before { content: "✓"; color: #168a68; }
+@media (max-width: 420px) { .password-checklist { grid-template-columns: 1fr; } }
