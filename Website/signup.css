@@ -176,3 +176,27 @@ button:disabled { cursor: wait; opacity: .8; transform: none; }
 .password-checklist li.met { color: #168a68; transform: translateX(2px); }
 .password-checklist li.met::before { content: "✓"; color: #168a68; }
 @media (max-width: 420px) { .password-checklist { grid-template-columns: 1fr; } }
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .45rem .7rem;
+  background: rgba(255,255,255,.55);
+  color: var(--ink);
+  font: inherit;
+  font-size: .72rem;
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.theme-toggle:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+.dark-mode { --ink: #f0f2fa; --muted: #adb4c7; --line: #41485d; --background: #161a27; background: var(--background); color: var(--ink); }
+.dark-mode::before { background: linear-gradient(135deg, #38318e, #684d8e); }
+.dark-mode::after { background: linear-gradient(135deg, #185f69, #344d96); }
+.dark-mode .card { background: rgba(29,34,51,.88); border-color: rgba(255,255,255,.12); box-shadow: 0 24px 70px rgba(0,0,0,.35); }
+.dark-mode input { background: rgba(10,14,25,.45); color: var(--ink); border-color: var(--line); }
+.dark-mode input::placeholder { color: #8490aa; }
+.dark-mode .choice { background: rgba(10,14,25,.25); border-color: var(--line); }
+.dark-mode .theme-toggle { background: rgba(10,14,25,.45); }

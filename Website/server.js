@@ -44,7 +44,7 @@ function passwordMatches(password, storedPassword) {
 }
 
 function serveFile(request, response) {
-  const requestedPath = request.url === "/" ? "/signUpForm.html" : request.url;
+  const requestedPath = request.url === "/" ? "/home.html" : request.url;
   const filePath = path.join(__dirname, decodeURIComponent(requestedPath.split("?")[0]));
   if (!filePath.startsWith(__dirname) || !fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
     response.writeHead(404); response.end("Not found"); return;
